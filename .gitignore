@@ -58,3 +58,4 @@ target/
 
 venv/
 *.sqlite3
+*.DS_Store
