@@ -19,3 +19,5 @@ class Beer(models.Model):
     alldaybeer =  models.FloatField(null=False)
     fruitiness = models.FloatField(null=False)
 
+    def __str__(self):
+        return self.name
