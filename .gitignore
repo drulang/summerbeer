@@ -57,5 +57,4 @@ docs/_build/
 target/
 
 venv/
-*.sqlite3
 *.DS_Store
