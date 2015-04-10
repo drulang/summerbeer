@@ -16,3 +16,12 @@
 .sb-navbar-aritcle {
     padding-bottom: 0px;
 }
+
+.widget-sidebar .list-unstyled li span {
+    margin-left: 15px;
+}
+
+.beer-well {
+    padding-bottom: 0px;
+    background-color: white;
+}

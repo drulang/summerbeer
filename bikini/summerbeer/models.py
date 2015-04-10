@@ -13,6 +13,7 @@ class Beer(models.Model):
 
     # Rating Beer
     review = models.CharField(max_length=2000)
+    rank = models.IntegerField(null=True, blank=True)
 
     hoppiness = models.FloatField(null=False)
     drinkability = models.FloatField(null=False)

@@ -1,7 +1,7 @@
  <!-- begin:article -->
         <div class="col-md-4">
           <!-- begin:about -->
-          <div class="content-article">
+          <div class="content-article well beer-well">
             <!-- begin:bio -->
             <div class="row">
               <div class="col-md-12">
@@ -11,43 +11,50 @@
                     <h3>{{ beer.name }}</h3>
                 </div>
 
-                <p><strong class="first-paragraph">L</strong>orem ipsum dolor sit amet, <strong>consectetur adipisicing</strong> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                consequat.</p>
+                <p><strong class="first-paragraph">{{ beer.review | slice:":1" }}</strong>{{ beer.review }}</p>
               </div>
             </div>
             <!-- end:bio -->
-            <br>
+            <hr>
+            <!-- begin:info -->
+            <div class="widget-sidebar">
+              <ul class="list-unstyled">
+                  <li><strong>Brewery</strong> <br><span>{{ beer.brewery }}</span></li>
+                  <li><strong>Style</strong> <br><span>{{ beer.style }}</span></li>
+                  <li><strong>ABV</strong> <br><span>{{ beer.abv }}%</span></li>
+              </ul>
+            </div>
+            <!-- end:info-->
             <!-- begin:skill -->
             <div class="row">
               <div class="col-md-12">
                 <div class="progress">
-                  <div class="progress-bar progress-bar-secondary" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100" style="width: 82%;">
-                    Web Design 82%
+                    <div class="progress-bar progress-bar-secondary" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100" style="width: {{ beer.hoppiness }}%;">
+                      Hoppiness {{ beer.hoppiness }}%
                   </div>
                 </div>
                 <!-- break -->
                 <div class="progress">
-                  <div class="progress-bar progress-bar-secondary" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100" style="width: 98%;">
-                    Mbribik 98%
+                    <div class="progress-bar progress-bar-secondary" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100" style="width: {{ beer.drinkability }}%;">
+                        Drinkability {{ beer.drinkability }}%
                   </div>
                 </div>
                 <!-- break -->
                 <div class="progress">
-                  <div class="progress-bar progress-bar-secondary" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
-                    Marketing 75%
+                    <div class="progress-bar progress-bar-secondary" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: {{ beer.alldaybeer }}%;">
+                        All Day Beer {{ beer.alldaybeer }}%
                   </div>
                 </div>
                 <!-- break -->
                 <div class="progress">
-                  <div class="progress-bar progress-bar-secondary" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100" style="width: 92%;">
-                    Support 92%
+                    <div class="progress-bar progress-bar-secondary" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100" style="width: {{ beer.fruitiness }}%;">
+                        Fruitiness {{ beer.fruitiness }}%
                   </div>
                 </div>
                 <!-- break -->
               </div>
             </div>
             <!-- end:skill -->
-            <br><br>
           </div>
           <!-- end:about -->
         </div>
