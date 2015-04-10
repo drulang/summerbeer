@@ -5,7 +5,7 @@ from summerbeer import models
 
 # Create your views here.
 def index(request):
-    beers = models.Beer.objects.all()
+    beers = models.Beer.objects.order_by("rank").all()
     context = {
         "beers": beers,
     }

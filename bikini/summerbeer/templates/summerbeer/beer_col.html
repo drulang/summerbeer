@@ -11,7 +11,7 @@
                     <h3>{{ beer.name }}</h3>
                 </div>
 
-                <p><strong class="first-paragraph">{{ beer.review | slice:":1" }}</strong>{{ beer.review }}</p>
+                <p class="beer-review"><strong class="first-paragraph">{{ beer.review | slice:":1" }}</strong>{{ beer.review }}</p>
               </div>
             </div>
             <!-- end:bio -->
@@ -19,7 +19,7 @@
             <!-- begin:info -->
             <div class="widget-sidebar">
               <ul class="list-unstyled">
-                  <li><strong>Brewery</strong> <br><span>{{ beer.brewery }}</span></li>
+                  <li><strong>Brewery</strong> <br><span><a href="{{ beer.brewery_website }}">{{ beer.brewery }}</a></span></li>
                   <li><strong>Style</strong> <br><span>{{ beer.style }}</span></li>
                   <li><strong>ABV</strong> <br><span>{{ beer.abv }}%</span></li>
               </ul>

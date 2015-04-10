@@ -25,3 +25,12 @@
     padding-bottom: 0px;
     background-color: white;
 }
+
+.progress-bar-secondary {
+    color: #434a54;
+}
+
+.beer-review {
+    height: 120px;
+    overflow: scroll;
+}
